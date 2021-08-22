@@ -19,13 +19,9 @@ negative index ; for e.g. [-1] for accessing list's last element
 
 function arguments using names=
 
-dictionary {} - hashmap ; for-in returns key
-
-
-
+- dictionary {} - hashmap ; for-in returns key
 
 Thonny / PythonTutor.com
-
 
 docstring - function """documentation""" first line
 
