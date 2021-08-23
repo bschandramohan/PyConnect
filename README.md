@@ -29,5 +29,12 @@ else:
 * local scope is for functions - not if, for, while etc
 
 * global profit
-pycharm tip: 
-Option + Shift key - click and drag down to do column wise add for all rows
+
+# Tips
+* pycharm tip:  Option + Shift key - click and drag down to do column wise add for all rows
+
+# Useful links
+* Ascii Art: https://ascii.co.uk/art
+* Logo generator: https://patorjk.com/software/taag/#p=display&f=Big%20Money-se&t=Amazing%20%20Python%0A
+    -  also check font : Graffiti
+* Trivia Database API: https://opentdb.com/api_config.php
