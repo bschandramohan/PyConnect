@@ -28,7 +28,11 @@ else:
 
 * local scope is for functions - not if, for, while etc
 
-* global profit
+* global variable
+
+* list comprehensions 
+    * squares = [i*i for i in range(10)]
+    * evens = [i for i in range(100) if not i % 2]
 
 # Tips
 * pycharm tip:  Option + Shift key - click and drag down to do column wise add for all rows
