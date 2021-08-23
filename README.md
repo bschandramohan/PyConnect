@@ -27,3 +27,7 @@ else:
 * docstring - function """documentation""" first line
 
 * local scope is for functions - not if, for, while etc
+
+* global profit
+pycharm tip: 
+Option + Shift key - click and drag down to do column wise add for all rows
