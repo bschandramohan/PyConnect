@@ -1,4 +1,4 @@
-from Learn.logo import logo_guess_the_number
+from learn.logo import logo_guess_the_number
 
 import random
 import os
