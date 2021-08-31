@@ -1,0 +1,8 @@
+day_of_week,is_working_day
+Sunday,False
+Monday,True
+Tuesday,True
+Wednesday,True
+Thursday,True
+Friday,True
+Saturday,False
