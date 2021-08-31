@@ -36,6 +36,7 @@ else:
 
 # Tips
 * pycharm tip:  Option + Shift key - click and drag down to do column wise add for all rows
+* pycharm tip: Cmd+F12 to view list of all methods
 
 # Useful links
 * Ascii Art: https://ascii.co.uk/art
