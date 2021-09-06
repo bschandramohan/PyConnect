@@ -64,33 +64,40 @@ import random
 
 cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
 
+
 def deal_initial_cards():
     initial_cards = []
     for _ in range(2):
         initial_cards.append(random.choice(cards))
     return initial_cards
 
+
 player_cards = deal_initial_cards()
 dealer_cards = deal_initial_cards()
 
+
 def calculate_score(cards) :
     return sum(cards)
-    
+
+
 print(f"Player cards={player_cards} score={calculate_score(player_cards)}")
 print(f"Dealer cards={dealer_cards} score={calculate_score(dealer_cards)}")
+
 
 def is21(cards):
     if sum(cards) == 21:
         return True
     else:
         return False
-    
+
+
 if is21(player_cards):
     print("Player won")
 elif is21(dealer_cards):
     print("Dealer won")
-    
-def isBust(cards):
+
+
+def is_bust(cards):
     if sum(cards) > 21:
         return True
     else:
