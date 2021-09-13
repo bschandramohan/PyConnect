@@ -1,10 +1,9 @@
-from turtle import Screen
-from player import Player
-from car_manager import CarManager
-from scorecard import ScoreCard
-from random import Random
 import time
+from turtle import Screen
 
+from car_manager import CarManager
+from player import Player
+from scorecard import ScoreCard
 
 screen = Screen()
 screen.setup(800, 600)
