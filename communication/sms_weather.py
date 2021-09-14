@@ -14,14 +14,12 @@ twilio_api_key = os.getenv("twilio_api_key")
 twilio_from_number = os.getenv("twilio_from_number")
 twilio_to_number = os.getenv("twilio_to_number")
 
-print(twilio_sid)
-print(type(twilio_sid))
-
 movie_name = "luca"
 movie_response = requests.get(f"{OMDB_API_URL}?t={movie_name}&apikey={omdb_key}")
-print(movie_response.json())
+# print(movie_response.json())
 
-
+# QuickStart code reference for Twilio send sms in python:
+# https://www.twilio.com/docs/sms/quickstart/python
 client = Client(twilio_sid, twilio_api_key)
 message = client.messages.create(
     body=f"{movie_response.json()}",
@@ -29,4 +27,4 @@ message = client.messages.create(
     to=twilio_to_number
 )
 
-print(message.status)
+print(message.sid)
