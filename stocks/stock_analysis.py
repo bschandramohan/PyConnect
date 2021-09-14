@@ -17,6 +17,7 @@ PARAMS = f"?function=TIME_SERIES_DAILY_ADJUSTED&symbol={symbol}&apikey={AV_STOCK
 
 response = requests.get(AV_STOCKS_API_URL + PARAMS)
 stock_perf_list = response.json()["Time Series (Daily)"]
+response.close()
 
 stock_trend = {}
 handled_date = ""
