@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 import requests
+import pprint
 
 response = requests.get("https://medium.com/techieconnect")
 # print(response.text[:100])
@@ -19,5 +20,7 @@ articles_list = soup.find_all(class_="u-breakWord")
 #     print(f"{i+1}. {article.getText()}")
 
 # Another way
-articles_title = [article.getText() for article in articles_list]
-print(articles_title)
+articles_titles = [article.getText() for article in articles_list]
+# print(articles_titles)
+pp = pprint.PrettyPrinter()
+pp.pprint(articles_titles)
