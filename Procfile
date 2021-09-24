@@ -1,1 +1,1 @@
-web: gunicorn encrypted_password:webapp:app
+web: gunicorn encrypted_password.webapp:app
