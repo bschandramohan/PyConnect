@@ -4,6 +4,7 @@ from werkzeug.security import *
 
 
 app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///User.db"
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
 
@@ -23,7 +24,11 @@ def init():
 def store(username, password):
     result = User.query.get(username)
     if result is None:
-        db.session.add(User(username, password))
+        # Hash the password. Format stored will be :
+        # password
+        # pbkdf2:sha256:260000$a3VM9h8DnK6mM0kS$90248571d69d79d591d798a6cbe88309bd1d66b0333979694b1a0d6e3ee15639
+        hash_of_password = generate_password_hash(password=password, method="pbkdf2:sha256", salt_length=16)
+        db.session.add(User(username, hash_of_password))
         db.session.commit()
         return True
     else:
@@ -33,7 +38,7 @@ def store(username, password):
 def is_user_login_correct(username, password):
     result = User.query.get(username)
     if result is not None:
-        if result.password == password:
+        if check_password_hash(pwhash=result.password, password=password):
             return True
 
     return False
