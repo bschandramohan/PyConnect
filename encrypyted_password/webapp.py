@@ -4,6 +4,11 @@ import user_repository
 user_repository.init()
 
 
+@app.route("/")
+def home():
+    return "<b> Use /user/register/{username}/{password} to register and /user/login/{username}/{password} to login</b>"
+
+
 @app.route("/user/register/<username>/<password>")
 def register(username, password):
     if user_repository.store(username, password):
