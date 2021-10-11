@@ -41,6 +41,7 @@ class Stack:
             return -1
 
 
+# Test code to run and see the results
 stack = Stack()
 stack.pop()
 stack.push(1)
