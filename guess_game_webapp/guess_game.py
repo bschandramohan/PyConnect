@@ -7,7 +7,7 @@ app = Flask(__name__)
 def generate_image_tag(fn):
     def operation(*args, **kwargs):
         result = fn(*args, **kwargs)
-        if result is not None and result is not None:
+        if result is not None:
             if result == "Too Low":
                 return f'<p>{result}</p> <iframe src="https://giphy.com/embed/wdh1SvEn0E06I" width="480" height="363" '\
                        f'frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a ' \
