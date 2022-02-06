@@ -18,6 +18,7 @@ def display(fn):
 
 
 class Stack:
+    """ Stack using linked list """
     def __init__(self):
         self.top = None
 
