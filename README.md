@@ -8,6 +8,8 @@ Learn Python
 * Note division is always float even for integer numbers (use // for integer results)
 * type(obj) to get the type 
 * Methods like float(), str() for conversion
+* Note that -1 evaluates to True. 
+  * False only for 0 Numbers, empty lists, None and False 
 * fstring - f"Value of reminder={reminder}"
 * if: elif: else: syntax instead of if, else if, else
   * no support for when (or java - switch)
@@ -17,7 +19,7 @@ Learn Python
 * dictionary {} - hashmap ; for-in returns key
 * docstring - function """documentation""" first line
 * local scope is for functions - not if, for, while etc
-* global variable using "global"
+* global variable using "global", "nonlocal" in py3+ for enclosed scopes
 * list comprehensions 
     * squares = [i*i for i in range(10)]
     * evens = [i for i in range(100) if not i % 2]
