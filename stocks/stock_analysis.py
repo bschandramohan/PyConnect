@@ -12,7 +12,7 @@ symbol = stock_tickers[0]
 
 AV_STOCK_API_KEY = os.getenv("av_stock_key")
 AV_STOCKS_API_URL = "https://www.alphavantage.co/query"
-PARAMS = f"?function=TIME_SERIES_DAILY_ADJUSTED&symbol={symbol}&apikey={AV_STOCK_API_KEY}"
+PARAMS = f"?function=TIME_SERIES_DAILY&symbol={symbol}&apikey={AV_STOCK_API_KEY}"
 
 
 response = requests.get(AV_STOCKS_API_URL + PARAMS)
